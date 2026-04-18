@@ -41,34 +41,7 @@ Output: |1234 - 4321| = 3087
 
 ## 💻 Implementation (C++)
 
-```cpp
-#include <iostream>
-#include <cmath>
-using namespace std;
 
-class Solution {
-public:
-    int reverse(int n) {
-        int newNum = 0;
-        while (n != 0) {
-            newNum = newNum * 10 + (n % 10);
-            n /= 10;
-        }
-        return newNum;
-    }
-
-    int mirrorDistance(int n) {
-        int rev = reverse(n);
-        return abs(n - rev);
-    }
-};
-
-int main() {
-    Solution obj;
-    int n = 1234;
-    cout << obj.mirrorDistance(n);
-    return 0;
-}
 ⚡ Complexity Analysis
 Operation	Complexity
 Reverse Number	O(log n)
